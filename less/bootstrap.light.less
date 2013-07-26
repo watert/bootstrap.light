@@ -24,6 +24,9 @@ body {.sans-serif();}
 @red:                   #D9230F;
 @yellow:                #FFCA27;
 @blue:                  #029ACF;
+
+@linkColor:             #09F;
+@primaryColor: hsl(210, 85%, 50%);
 @c_info: #5bc0de;
 @c_warning: @yellow;
 @c_danger: @red;
@@ -35,11 +38,14 @@ body {.sans-serif();}
 // Buttons
 .btn(@color:#F5F5F5) { 
 	background:@color;
+	&:hover {
+		background:darken(@color,8%);
+	}
 	color:#FFF;
 }
 .btn { 
 	.btn();  color:#555; 
-	&.btn-primary {.btn(@blue);}
+	&.btn-primary {.btn(@primaryColor);}
 	&.btn-info {.btn(@c_info);}
 	&.btn-success {.btn(@c_success);}
 	&.btn-warning {.btn(@c_warning);}
@@ -47,9 +53,10 @@ body {.sans-serif();}
 	&.btn-inverse {.btn(#333);}
 
 	&.btn-large {padding:12px 18px;}
-	&.btn-small {padding:2px 5px; border-radius:2px;}
+	&.btn-small {padding:2px 5px; }
 
 	&.disabled {opacity:0.5;cursur:default;}
+	cursor:pointer;
 	display:inline-block;
 	padding:6px 8px; 
 	text-decoration: none;font-weight:bold;

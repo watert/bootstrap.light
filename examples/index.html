@@ -18,12 +18,16 @@
         <br>
         <div id="part_typo" data-load="id"></div>
         <div id="part_buttons" data-load="id"></div>
+        <div id="part_form" data-load="id"></div>
     </div>
     <div id="preview"></div>
     <script> 
     $("[data-load]").each(function(){
         var dom = $(this);
-        dom.load(dom.attr("id")+".html");
+        dom.load(dom.attr("id")+".html",function(){
+            $("#part_buttons tr").find("th:eq(4),td:eq(4)").hide();
+            $("#part_buttons tr").find("th:eq(5),td:eq(5)").hide();
+        });
     });
     // $("#preview").load("./content.html"); 
     </script>
