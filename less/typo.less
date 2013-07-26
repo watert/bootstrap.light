@@ -1,0 +1,43 @@
+.sans-serif(){ font-family:"Helvetica Neue", Helvetica, Arial; }
+.serif(){ font-family:Cochin, "Times New Roman"; }
+.mono(){ font-family:consolas; }
+.typo(@font-size){
+	body {font:@font-size "Helvetica Neue", Helvetica, Arial;;}
+	h1,h2,h3,h4,h5,h6 {font-weight:bold;line-height:2em;color:#333;}
+	h1 {font-size:4*@font-size;line-height:1.2em;margin:2*@font-size 0 1*@font-size;}
+	h2 {font-size:2.8*@font-size;}
+	h3 {font-size:2*@font-size;}
+	h4 {font-size:1.4*@font-size;}
+	p,address {line-height:1.35em; margin:1em 0;}
+	strong,b {font-weight:bold;}
+	a { color:lighten(@blue,15%); }
+	.lead {font-size:2*@font-size;}
+	.well {padding:20px;background:#EEE;}
+	.well-small {padding:5px;background:#EEE;}
+	hr {margin: @font-size*1.4 0;
+		border: 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #fff; }
+	table {
+		max-width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+		border-spacing: 0; }
+	.table-bordered {
+		// border-collapse: separate;
+		border-radius:4px;
+		td,th {border:1px solid #DDD;}
+	}
+	.table {
+		margin-bottom:2*@font-size;
+		width:100%;
+		th {font-weight:bold;color:#444;}
+		th,td {
+			padding: 8px;
+			line-height: 20px;
+			text-align: left;
+			vertical-align: top;
+			border-top: 1px solid #ddd;
+		}
+	}
+}

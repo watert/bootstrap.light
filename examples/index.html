@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap.Light</title>
+    <link rel="stylesheet/less" href="../less/bootstrap.light.less" type="text/css">
+    <style type="text/less">
+        .dropdown-toggle {display:none;}
+        .dropdown-menu {display:none;}
+    </style>
+    <script src="jquery-1.7.1.min.js"></script>
+    <script src="less-1.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1> Bootstrap.Light </h1>
+        <hr>
+        <br>
+        <div id="part_typo" data-load="id"></div>
+        <div id="part_buttons" data-load="id"></div>
+    </div>
+    <div id="preview"></div>
+    <script> 
+    $("[data-load]").each(function(){
+        var dom = $(this);
+        dom.load(dom.attr("id")+".html");
+    });
+    // $("#preview").load("./content.html"); 
+    </script>
+</body>
+</html>

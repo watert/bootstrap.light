@@ -1,0 +1,60 @@
+@fontSize:13px;
+
+// -------------------------
+// Grid : Default 940px grid
+// -------------------------
+// Core Grid
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+// Fluid grid
+// @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+// @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+@import "base.less";
+body {.sans-serif();}
+.container {width:@gridRowWidth; display:block;margin:auto;}
+#grid > .core(@gridColumnWidth, @gridGutterWidth);
+#grid > .core > .spanX(@gridColumns);
+
+
+//Colors
+@green:                 #3D9400;
+@red:                   #D9230F;
+@yellow:                #FFCA27;
+@blue:                  #029ACF;
+@c_info: #5bc0de;
+@c_warning: @yellow;
+@c_danger: @red;
+@c_success: @green;
+
+@import "typo.less";
+.typo(13px);
+
+// Buttons
+.btn(@color:#F5F5F5) { 
+	background:@color;
+	color:#FFF;
+}
+.btn { 
+	.btn();  color:#555; 
+	&.btn-primary {.btn(@blue);}
+	&.btn-info {.btn(@c_info);}
+	&.btn-success {.btn(@c_success);}
+	&.btn-warning {.btn(@c_warning);}
+	&.btn-danger {.btn(@c_danger);}
+	&.btn-inverse {.btn(#333);}
+
+	&.btn-large {padding:12px 18px;}
+	&.btn-small {padding:2px 5px; border-radius:2px;}
+
+	&.disabled {opacity:0.5;cursur:default;}
+	display:inline-block;
+	padding:6px 8px; 
+	text-decoration: none;font-weight:bold;
+	border:1px solid #DDD;
+	border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); 
+	border-radius:3px;
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05); 
+}
