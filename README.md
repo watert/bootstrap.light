@@ -11,6 +11,8 @@ Bootstrap style lighter Framework (Less than 10K before gzip.)
 
 Now Size: compressed: 7.7KB, GZip: ?
 
+##### [DEMO Link](http://watert.github.io/bootstrap.light/)
+
 ### Why not [PURECSS](http://purecss.io/)?
 
 PureCSS is small enough too: 4.3K base + lower than 5K theme(default rainbow/baby-blue theme), and well supported for basic functions.
