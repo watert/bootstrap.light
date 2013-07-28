@@ -1,73 +1,37 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bootstrap.light : Light Bootstrap style CSS Framework (less than 10K)" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Bootstrap.light</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/watert/bootstrap.light">View on GitHub</a>
-
-          <h1 id="project_title">Bootstrap.light</h1>
-          <h2 id="project_tagline">Light Bootstrap style CSS Framework (less than 10K)</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/watert/bootstrap.light/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/watert/bootstrap.light/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap.Light</title>
+    <!-- <link rel="stylesheet/less" href="../less/bootstrap.light.less" type="text/css"> -->
+    <link rel="stylesheet" href="bootstrap.light.css">
+    <style type="text/less">
+        .dropdown-toggle {display:none;}
+        .dropdown-menu {display:none;}
+    </style>
+    <script src="jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- <h1> Bootstrap.Light </h1> -->
+        <div id="readme" data-load="id"></div>
+        <hr>
+        <br>
+        <div id="part_typo" data-load="id"></div>
+        <div id="part_buttons" data-load="id"></div>
+        <div id="part_form" data-load="id"></div>
+        <div id="part_menus" data-load="id"></div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="bootstraplightcss" class="anchor" href="#bootstraplightcss"><span class="octicon octicon-link"></span></a>Bootstrap.Light.CSS</h1>
-
-<p>Bootstrap style lighter Framework (Less than 10K before gzip.)</p>
-
-<ul>
-<li>Same Syntax with Bootstrap, try just change the style link</li>
-<li>Just basic styles implement, so with a super lighter file size, header inline using recommended.</li>
-</ul><p>Now Size: compressed: 7.7KB, GZip: ?</p>
-
-<h3>
-<a name="parts" class="anchor" href="#parts"><span class="octicon octicon-link"></span></a>Parts:</h3>
-
-<ul>
-<li><del>Grid</del></li>
-<li><del>Typo, Tables, Forms, Alerts</del></li>
-<li><del>Buttons, Labels, Badges</del></li>
-<li><del>Menu, Tab, Pagination</del></li>
-<li>Dropdown &amp; ProgressBar ?</li>
-</ul><h3>
-<a name="todos" class="anchor" href="#todos"><span class="octicon octicon-link"></span></a>TODOs:</h3>
-
-<ul>
-<li>Basic Javascript Parts seperated style plugin.</li>
-</ul>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Bootstrap.light maintained by <a href="https://github.com/watert">watert</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+    <div id="preview"></div>
+    <script> 
+    $("[data-load]").each(function(){
+        var dom = $(this);
+        dom.load(dom.attr("id")+".html",function(){
+            $("#part_buttons tr").find("th:eq(4),td:eq(4)").hide();
+            $("#part_buttons tr").find("th:eq(5),td:eq(5)").hide();
+        });
+    });
+    // $("#preview").load("./content.html"); 
+    </script>
+</body>
 </html>
