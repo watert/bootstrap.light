@@ -1,0 +1,26 @@
+@fontSize:13px;
+
+// -------------------------
+// Grid : Default 940px grid
+// -------------------------
+// Core Grid
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+// Fluid grid
+// @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+// @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+//Colors
+@green:                 #3D9400;
+@red:                   #D9230F;
+@yellow:                #FFCA27;
+@blue:                  #029ACF;
+
+@linkColor:             #09F;
+@primaryColor: hsl(210, 85%, 50%);
+@c_info: #5bc0de;
+@c_warning: darken(@yellow,10%);
+@c_danger: @red;
+@c_success: @green;

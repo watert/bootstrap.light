@@ -1,16 +1,4 @@
-@fontSize:13px;
-
-// -------------------------
-// Grid : Default 940px grid
-// -------------------------
-// Core Grid
-@gridColumns:             12;
-@gridColumnWidth:         60px;
-@gridGutterWidth:         20px;
-@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
-// Fluid grid
-// @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
-// @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+@import "variables.less";
 
 @import "base.less";
 body {.sans-serif();}
@@ -18,50 +6,62 @@ body {.sans-serif();}
 #grid > .core(@gridColumnWidth, @gridGutterWidth);
 #grid > .core > .spanX(@gridColumns);
 
-
-//Colors
-@green:                 #3D9400;
-@red:                   #D9230F;
-@yellow:                #FFCA27;
-@blue:                  #029ACF;
-
-@linkColor:             #09F;
-@primaryColor: hsl(210, 85%, 50%);
-@c_info: #5bc0de;
-@c_warning: @yellow;
-@c_danger: @red;
-@c_success: @green;
-
 @import "typo.less";
-.typo(13px);
+.typo(@fontSize);
+.form(@fontSize);
+.table(@fontSize);
 
-// Buttons
-.btn(@color:#F5F5F5) { 
-	background:@color;
-	&:hover {
-		background:darken(@color,8%);
+@import "buttons.less";
+
+/* Navs */
+@import "navs.less";
+
+.labelStyle(@name,@color){ 
+	.label-@{name},
+	.badge-@{name} { background:@color; }
+}
+.label {
+	border-radius:3px;padding:0.15*@fontSize 0.5*@fontSize;font-size:0.85*@fontSize;
+}
+.badge {border-radius:10px; padding:0.15*@fontSize @fontSize;}
+.label,.badge {
+	background:#999;color:#FFF;display:inline-block;
+	font-weight:bold;
+	// .label-success {}
+}
+.labelStyle(success,@green);
+.labelStyle(warning,@c_warning);
+.labelStyle(important,@c_danger);
+.labelStyle(info,@c_info);
+.labelStyle(inverse,#333);
+
+/* Alerts */
+.close {float:right;font-size:1.5em;color:#888; cursor:pointer;
+	&:hover {color:#444;}
+}
+.alert {
+	.style(@color){
+		background:lighten(@color,40%);
+		color:darken(@color,15%);		
 	}
-	color:#FFF;
-}
-.btn { 
-	.btn();  color:#555; 
-	&.btn-primary {.btn(@primaryColor);}
-	&.btn-info {.btn(@c_info);}
-	&.btn-success {.btn(@c_success);}
-	&.btn-warning {.btn(@c_warning);}
-	&.btn-danger {.btn(@c_danger);}
-	&.btn-inverse {.btn(#333);}
+	.style(@c_warning);
 
-	&.btn-large {padding:12px 18px;}
-	&.btn-small {padding:2px 5px; }
-
-	&.disabled {opacity:0.5;cursur:default;}
-	cursor:pointer;
-	display:inline-block;
-	padding:6px 8px; 
-	text-decoration: none;font-weight:bold;
-	border:1px solid #DDD;
-	border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); 
-	border-radius:3px;
-	box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05); 
+	position: relative;
+	padding:0.6em 2.5em 0.6em 1em;
+	h2,h3,h4,h5,h6 {margin:0;}
+	margin-bottom:@fontSize;
+	border-radius:4px;
+	.close {
+		position: relative;
+		top: -2px;
+		right: -21px;
+		line-height: 20px;
+	}
 }
+.alert-error{.alert>.style(lighten(@c_danger,5%));}
+.alert-info{.alert>.style(lighten(@c_info,-10%));}
+.alert-success{.alert>.style(lighten(desaturate(@c_success,30%),15%));}
+
+/* Helpers */
+.pull-left {float:left;}
+.pull-right {float:right;}

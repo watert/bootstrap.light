@@ -1,0 +1,55 @@
+
+li.active {
+	&, & > a { color:#888;}
+	a:hover {text-decoration: underline; }
+}
+.breadcrumb, .pagination, .pager, .navbar, .nav-tabs, .nav-pills {
+	.clearfix();
+	margin-bottom:@fontSize ;
+	a,li.active {
+		padding:0.5*@fontSize 0.8*@fontSize; display:inline-block;text-decoration: none;
+	}
+	li { float:left; display:inline-block; 
+		&.active a {padding:0;display:inline;border:none;}
+	}
+}
+.breadcrumb li{
+	&, &.active, a { border:none; } 
+}
+.pagination, .pager {
+	padding-left:1px;
+	li { border:1px solid #DDD; margin-left:-1px;}
+}
+.nav-tabs {
+	border-bottom:1px solid #DDD;
+	
+	> li.active {
+		background:#FFF;border:1px solid #DDD;border-bottom-width:0; 
+	}
+	li { margin-bottom:-1px; 
+		&:hover { background:#F7F7F7;}
+	}
+	
+}
+.nav-list {
+	.nav-header {opacity:0.4;font-weight:bold;color:black;}
+	li+.nav-header {margin-top:1em;}
+	.nav-header,li > a {display:block;padding:0.4em 0.5em;text-decoration: none;}
+	li>a:hover {color:darken(@linkColor,10%);}
+	.active > a {background:@linkColor;color:#FFF;
+		&:hover {color:#FFF;text-decoration: none;}
+	}
+	// li.active>a:hover {color:darken(@linkColor,10%);}
+}
+.nav-pills {
+	li.active {padding:0; 
+		a {color:#FFF;background:@linkColor;}
+	}
+	a:hover {background:#EEE;}
+	a,li.active a{ display:inline-block;margin-right:5px;margin-bottom:5px;
+		padding:0.5*@fontSize 0.8*@fontSize; border-radius:5px; 
+	}
+}
+.dropdown-menu {display:none;}
+.dropdown {
+}

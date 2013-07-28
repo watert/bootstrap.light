@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap.Light</title>
-    <link rel="stylesheet/less" href="light.less" type="text/css">
+    <link rel="stylesheet/less" href="../less/bootstrap.light.less" type="text/css">
+    <style style="text/less">
+		#main-menu,.navbar-fixed-top	 {display:none;}
+    </style>
     <script src="jquery-1.7.1.min.js"></script>
     <script src="less-1.4.1.min.js"></script>
 </head>
 <body>
+	<div class="navbar"><a href="http://localhost/bootswatch/cerulean/">Original</a></div>
     <div id="preview"></div>
     <script> 
     $("#preview").load("./part_full_content.html"); 
