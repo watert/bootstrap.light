@@ -9,8 +9,8 @@ Now Size: compressed: 7.7KB, GZip: ?
 
 ### Parts:
 
-- <del>Grid</del>
-- <del>Typo, Tables, Forms, Alerts</del>
+- <del>Grid, Basic Typography </del>
+- <del>Tables, Forms, Alerts</del>
 - <del>Buttons, Labels, Badges</del>
 - <del>Menu, Tab, Pagination</del>
 - Dropdown & ProgressBar ?
