@@ -29,8 +29,19 @@ but...
 - <del>Tables, Forms, Alerts</del>
 - <del>Buttons, Labels, Badges</del>
 - <del>Menu, Tab, Pagination</del>
-- *NOT SUPPORTED*: Fluid Grid, Navbar, Dropdown, ProgressBar, mobile responsive ?
 
-### TODOs:
+*ABOUT TO SUPPORTED*:
 
-- Basic Javascript Parts seperated style plugin.
+- Code & Pre Style
+- Fluid Grid 
+- Mobile Responsive
+- Navbar
+
+*CONSIDERING...*:
+
+- Dropdown Menu
+- ProgressBar
+
+### Plugins about to do:
+- Javascript Parts Style Plugin
+- Icons via Base64 Plugin
