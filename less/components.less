@@ -1,0 +1,45 @@
+
+.labelStyle(@name,@color){ 
+	.label-@{name},
+	.badge-@{name} { background:@color; }
+}
+.label {
+	border-radius:3px;padding:0.15*@fontSize 0.5*@fontSize;font-size:0.85*@fontSize;
+}
+.badge {border-radius:10px; padding:0.15*@fontSize @fontSize;}
+.label,.badge {
+	background:#999;color:#FFF;display:inline-block;
+	font-weight:bold;
+	// .label-success {}
+}
+.labelStyle(success,@green);
+.labelStyle(warning,@c_warning);
+.labelStyle(important,@c_danger);
+.labelStyle(info,@c_info);
+.labelStyle(inverse,#333);
+
+/* Alerts */
+.close {float:right;font-size:1.5em;color:#888; cursor:pointer;
+	&:hover {color:#444;}
+}
+.alert {
+	.style(@color){
+		background:lighten(@color,40%);
+	}
+	.style(@c_warning);
+	color:rgba(0,0,0,0.7);
+	position: relative;
+	padding:0.6em 2.5em 0.6em 1em;
+	h2,h3,h4,h5,h6 {margin:0;}
+	margin-bottom:@fontSize;
+	border-radius:4px;
+	.close {
+		position: relative;
+		top: -2px;
+		right: -21px;
+		// line-height: 20px;
+	}
+}
+.alert-error{.alert>.style(lighten(@c_danger,5%));}
+.alert-info{.alert>.style(lighten(@c_info,-10%));}
+.alert-success{.alert>.style(lighten(desaturate(@c_success,30%),15%));}

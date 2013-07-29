@@ -13,54 +13,25 @@ body {.sans-serif();}
 
 @import "buttons.less";
 
-/* Navs */
+/* Navs, Tabs, Lists */
 @import "navs.less";
 
-.labelStyle(@name,@color){ 
-	.label-@{name},
-	.badge-@{name} { background:@color; }
-}
-.label {
-	border-radius:3px;padding:0.15*@fontSize 0.5*@fontSize;font-size:0.85*@fontSize;
-}
-.badge {border-radius:10px; padding:0.15*@fontSize @fontSize;}
-.label,.badge {
-	background:#999;color:#FFF;display:inline-block;
-	font-weight:bold;
-	// .label-success {}
-}
-.labelStyle(success,@green);
-.labelStyle(warning,@c_warning);
-.labelStyle(important,@c_danger);
-.labelStyle(info,@c_info);
-.labelStyle(inverse,#333);
+/* Labels, Badges, Alerts */
+@import "components.less";
 
-/* Alerts */
-.close {float:right;font-size:1.5em;color:#888; cursor:pointer;
-	&:hover {color:#444;}
-}
-.alert {
-	.style(@color){
-		background:lighten(@color,40%);
-		color:darken(@color,15%);		
+/* Responsive */
+@media(max-width:767px){
+	body {padding:0 0.5*@gridGutterWidth;}
+	.row {margin:0;}
+	.container {width:auto;}
+	[class*="span"],.row-fluid{
+		display:block;float:none;width:100%;margin-left:0;box-sizing:border-box;
 	}
-	.style(@c_warning);
-
-	position: relative;
-	padding:0.6em 2.5em 0.6em 1em;
-	h2,h3,h4,h5,h6 {margin:0;}
-	margin-bottom:@fontSize;
-	border-radius:4px;
-	.close {
-		position: relative;
-		top: -2px;
-		right: -21px;
-		line-height: 20px;
+	.form-horizontal {
+		.control-label {float:none;display:block;text-align: left;margin-bottom:0.5em;}
+		.controls {margin-left:0;}
 	}
 }
-.alert-error{.alert>.style(lighten(@c_danger,5%));}
-.alert-info{.alert>.style(lighten(@c_info,-10%));}
-.alert-success{.alert>.style(lighten(desaturate(@c_success,30%),15%));}
 
 /* Helpers */
 .pull-left {float:left;}

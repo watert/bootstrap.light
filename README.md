@@ -25,16 +25,14 @@ but...
 
 ### Supported List:
 
-- <del>Grid, Basic Typography </del>
+- <del>Grid, Mobile Responsive, Basic Typography </del>
 - <del>Tables, Forms, Alerts</del>
 - <del>Buttons, Labels, Badges</del>
 - <del>Menu, Tab, Pagination</del>
 
 *ABOUT TO SUPPORTED*:
 
-- Code & Pre Style
 - Fluid Grid 
-- Mobile Responsive
 - Navbar
 
 *CONSIDERING...*:
