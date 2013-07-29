@@ -9,7 +9,7 @@ Bootstrap style lighter Framework (Less than 10K before gzip.)
 - Focus on style and size compressing. 
 	Not components or functions, which bootstrap goes too far with javascript things.
 
-Now Size: compressed: 7.7KB, GZip: ?
+Now Size: compressed: 8.2KB, GZip: ?
 
 ##### [DEMO Link](http://watert.github.io/bootstrap.light/)
 

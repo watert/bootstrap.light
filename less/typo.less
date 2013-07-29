@@ -3,14 +3,15 @@
 .mono(){ font-family:consolas; }
 .typo(@font-size){
 	body {font:@font-size "Helvetica Neue", Helvetica, Arial;line-height:1.35em;}
-	h1,h2,h3,h4,h5,h6,legend {margin-top:2em;margin-bottom:0.3em;font-weight:bold;line-height:2em;opacity:0.85;}
-	h1 {font-size:4*@font-size;line-height:1.2em;margin:4*@font-size 0 2*@font-size;}
+	h1,h2,h3,h4,h5,h6,legend {margin-bottom:0.3em;font-weight:bold;line-height:2em;opacity:0.85;}
+	h1 {font-size:4*@font-size;line-height:1.2em;margin:2*@font-size 0 1*@font-size;}
 	h2 {font-size:2.8*@font-size;}
 	h3 {font-size:2*@font-size;}
 	h4 {font-size:1.4*@font-size;}
 	p,address { margin:@font-size 0 @font-size;}
 	strong,b {font-weight:bold;}
 	a { color:@linkColor; }
+	.page-header {margin-top:1.5*4*@font-size;margin-bottom:0.5*4*@font-size;border-bottom:1px solid #EEE;}
 	.lead {font-size:2*@font-size;}
 	.well {padding:20px;background:#F7F7F7;border-radius:5px;}
 	.well-small {padding:5px;}
